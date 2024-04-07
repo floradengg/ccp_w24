@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/html5reset.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>Home</title>
+</head>
+<body>
+    <header>
+        <a href = "#main"  class="skip">Skip to Main Content</a>
+        <div class="container">
+            <div class="subcontainer">
+                <nav class="navbar">
+                    <a href="#" class="nav-branding">Menu</a>
+                    <ul class="nav-menu">
+                        <li class="nav-item"><a class="active" href = "index.html">Home</a></li>
+                        <li class="nav-item"><a href = "pets.html">Cute Pets</a></li>
+                        <li class="nav-item"><a href = "recipes.html">Yummy Recipes</a></li>
+                        <li class="nav-item"><a href = "travel.html">Terrific Travels</a></li>
+                    </ul>
+                    <div class="hamburger">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main id = "main">
+        <h1>Flora's Site</h1> 
+        <div class="clock">
+            <div class="container-clock">
+                <div class="time">
+                    <span id="hrs">00</span>
+                    <span>:</span>
+                    <span id="mins">00</span>
+                    <span>:</span>
+                    <span id="secs">00</span>
+                </div>
+
+            </div>
+
+        </div><br>
+
+        <div>
+            <p>Welcome to Flora's fantastic blog, your go-to destination for all things pets, recipes, and travel! Explore a world of captivating content where we cater to your love for cute companions, culinary delights, and amazing adventures. </p> <br>
+
+        </div>
+
+    <div>
+        Hobbies:
+            <ul>
+                <li>painting</li>
+                <li>journaling</li>
+                <li>watching movies</li>
+            </ul>
+    </div>  
+    <div>
+        <form action="#" method = "post" id="form">
+            <fieldset> 
+                <legend>Contact Me:</legend>
+                <label for="name">Name
+                    <input type="text" id = "name">
+                </label><br>
+                <label> Email
+                    <input type="email" id = "email"> 
+                </label><br>
+                <label for="message">Message
+                    <input type="text" id = "message">
+                </label><br>
+                <input type="submit" id="button" value="Send!">
+            </fieldset>
+        </form> 
+    </div>
+</main>
+<script src="script.js"></script>
+</body>
+</html>

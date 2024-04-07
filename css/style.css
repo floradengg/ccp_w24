@@ -1,0 +1,460 @@
+/* for titles */
+h1 {
+    font-size: 3em;
+    padding: 0.5em; 
+    text-align: center;
+}
+
+h2 {
+    font-size: 2em;
+}
+
+h3 {
+    font-size: 1.5em;
+}
+
+body{
+    background-color: rgb(245, 236, 224);
+}
+
+li {
+    font-size: 1em;
+    margin-left: 1em;
+    list-style-type: square;
+    list-style-position: inside;
+ }
+
+ ol li{
+    list-style-type: upper-roman;
+    list-style-position: inside;
+ }
+/*-----------------------------------------------------------------------*/
+/* for navigation bar */
+.navbar{
+    display: flex;
+    list-style-type: none;
+    margin: auto;
+    overflow: hidden;
+    background-color: #355C7D;
+}
+
+.nav-branding{
+    margin-left: 2%;
+    font-size: x-large;
+    color: #ffffff;
+    line-height: 2;
+}
+
+.navbar li{
+    display: inline-block;
+}
+
+.navbar li a { 
+    display: block; 
+    color: #ffffff;
+    text-align: center;
+    padding: 16px 16px;
+    font-size: large;
+}
+
+.active {
+    background-color: #4a4949;
+    font-weight: bolder;
+}
+
+.navbar li a:hover:not(.active) {
+    background-color: #32415e;
+}
+
+/*-----------------------------------------------------------------------*/
+/* hide skip to main content unless tab key is pressed on*/
+.skip{
+    left:-999px;
+    position:absolute;
+    top:auto;
+    width:1px;
+    height:1px;
+}
+
+.skip:focus{
+    color: #fff;
+    background-color:#282727;
+    left: auto;
+    top: auto;
+    width: 25%;
+    height: auto;
+    overflow:auto;
+    margin: 10px 35%;
+    padding: 5px;
+    border-radius: 35px;
+    text-align:center;
+    font-size: 20px;
+    z-index: 999;
+}
+
+/*-----------------------------------------------------------------------*/
+/* using grid */
+.bacon{
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    gap: 3%;
+    margin-left: 0.7em;
+}
+
+.item img, video, .animated img{
+    background-color: #282727;
+    border-radius: 40%;
+    border: solid 0.3em rgb(184, 159, 126);
+}
+
+.momo, .maple, .luna, .vangogh{
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    gap: 3%;
+}
+
+.thailand{
+    display: grid; 
+    grid-template-columns: 1fr 1fr;
+    margin-left: 0.7em;
+    gap: 2%;
+}
+
+.pic1 img{
+    border-radius: 120px 0 0 0;
+    border: 0.2em solid rgb(247, 179, 179);
+}
+
+.pic2 img{
+    border-radius: 0 120px 0 0;
+    border: 0.2em solid rgb(247, 179, 179);
+}
+
+.pic3 img{
+    border-radius: 0 0 0 120px;
+    border: 0.2em solid rgb(247, 179, 179);
+}
+
+.pic4 img{
+    border-radius: 0 0 120px 0;
+    border: 0.2em solid rgb(247, 179, 179);
+}
+
+.london, .ny{
+    display: grid; 
+    grid-template-columns: 1fr 1fr;
+}
+
+.london img{
+    border-radius: 50%;
+    border: solid 0.2em rgb(247, 179, 179);
+}
+
+.ny img{
+    border-radius: 40%;
+    border: solid 0.2em rgb(247, 179, 179);
+}
+
+form{
+    display: none;
+}
+
+.map{
+    display: none;
+}
+
+/*-----------------------------------------------------------------------*/
+/* reducing animation */
+
+@media screen and (prefers-reduced-motion: reduce) {
+    .animated{
+        display: none !important; 
+    }
+
+    .travelanimated{
+        display: none !important; 
+    }
+}
+
+/*-----------------------------------------------------------------------*/
+/* tablet view */
+@media only screen and (min-width: 768px){
+    /* hamburger menu */
+    body {
+        padding-top: 60px; 
+        background-color: #FFF7ED; 
+        color: #173F26;
+    }
+
+    a{
+        text-decoration: none;
+        font-weight: normal;
+    }
+
+    a.active {
+        text-decoration: underline;
+        font-weight: bolder;
+        background-color: #FFF7ED;
+    }
+
+    .navbar{
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background-color: #bfc1f8;
+    }
+
+    .navbar li a { 
+        color: #173F26;
+    }
+
+    .navbar li a:hover:not(.active) {
+        background-color: #ffffff;
+    }
+
+    .nav-menu{
+       display: flex;
+       justify-content: space-between;
+       align-items: center;
+    }
+
+    .nav-branding{
+        font-size: 2rem;
+        color: #173F26;
+    }
+
+    .hamburger{
+        display: block;
+        margin-left: 80%;
+        margin-top: 15px;
+    }
+
+    .hamburger.active {
+        background-color: #bfc1f8;
+    }
+
+    .bar{
+        display: block;
+        background-color: #173F26;
+        width: 25px;
+        height: 3px;
+        margin: 5px 0;
+        transition: all 0.3s ease;
+    }
+
+    .hamburger.active .bar:nth-child(2){
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .nav-menu{
+        position: fixed;
+        left: -100%;
+        top: 60px;
+        gap: 0;
+        flex-direction: column;
+        background-color: #bfc1f8;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+    }
+
+    .nav-item{
+        margin: 16px 0; 
+    }
+
+    .nav-menu.active{
+        left: 0; 
+    }
+
+     /* multi col layout */
+     .pet, .country, .food{
+        display: grid;
+        grid-template-columns: 1fr 1fr; 
+     }
+
+    .pet img{
+        border-radius: 5%;
+    }
+
+    .petIntro, .countryInfo, .foodInfo{
+        grid-column: 1/2;
+    }
+
+    .text{
+        margin-top: 8%;
+        grid-column: 2/-1;
+        
+        background-color: #d4d5f7;
+        border-radius: 5%;
+        padding: 3%;
+        overflow-y: scroll;
+        height: 200px;
+    }
+    
+    .bacon, .momo, .maple, .luna, .vangogh{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr; 
+        gap: 10px;
+    }
+
+    .item img, video, .animated img{
+        background-color: #282727;
+        border-radius: 5%;
+        border: solid 0.5em #bfc1f8;
+    }
+
+    .pic1 img, .pic2 img, .pic3 img, .pic4 img, .ny img, .london img{
+        border-radius: 50%;
+        border: solid 0.5em #bfc1f8;
+    }
+
+    .recipelink{
+        color: rgb(18, 59, 112);
+    }
+
+    form{
+        display: none;
+    }
+
+    .map{
+        display: none;
+    }
+}
+
+/*-----------------------------------------------------------------------*/
+/* desktop view */
+@media only screen and (min-width: 1024px){
+    /* hamburger menu */
+    .navbar{
+        width: 10%;
+    }
+
+    .hamburger{
+        margin-left: 20%;
+    }
+
+    .nav-menu{
+        justify-content: normal;
+        width: 10%;
+        height: 100%;
+    }
+
+    /* multi col layout */
+    .pet, .country, .food{
+        grid-template-columns: 1fr 1fr 1fr; 
+    }
+
+    .petIntro, .countryInfo, .foodInfo{
+        grid-column: 1/2;
+    }
+
+    .text{
+        grid-column: 2/3;
+    }
+
+    .likes{
+        grid-column: 3/-1;
+        margin-top: 8%;
+        margin-left: 20%;
+    }
+
+    .bacon, .momo, .maple, .luna, .vangogh{
+        grid-template-columns: 1fr 1fr 1fr 1fr; 
+    }
+
+    form{
+        display: block;
+        margin-top: 2%;
+    }
+
+    legend{
+        font-size: larger;
+    }
+
+    label{
+        font-size: large;
+    }
+
+    input {
+        width: 50%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        box-sizing: border-box; 
+    }
+
+    #message{
+        height: 200px;
+    }
+
+    input[type=submit] {
+        background-color: #46a94b;
+        color: rgb(0, 0, 0);
+        padding: 14px 20px;
+        cursor: pointer;
+        width: 20%; 
+        margin-left: 250px;
+        margin-top: 30px; 
+    }
+
+    .map{
+        display: block;
+        margin-left: 60px;
+        margin-top: 30px;
+    }
+
+    .clock{
+        width: 50%;
+        min-height: 20vh;
+        background: linear-gradient(60deg, #bfc1f8, #4a494a);
+        margin: 0 auto;
+        color: white;
+        position: relative;
+    }
+
+    .container-clock{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .time span{
+        font-size: 80px;
+        width: 65px;
+        display: inline-block;
+        text-align: center;
+        position: relative;
+    }
+
+    .time span::after{
+        font-size: 16px;
+        position: absolute;
+        bottom: -10px;
+        transform: translateX(50%);
+    }
+
+    #hrs::after{
+        content: "HOURS";
+        left: -20%;
+    }
+
+    #mins::after{
+        content: "MINUTES";
+        left: -45%;
+    }
+
+    #secs::after{
+        content: "SECONDS";
+        left: -45%;
+    }
+}
