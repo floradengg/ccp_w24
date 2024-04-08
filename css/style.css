@@ -406,7 +406,7 @@ form{
         margin-top: 30px; 
     }
 
-    .map{
+    #map{
         display: block;
         margin-left: 60px;
         margin-top: 30px;
